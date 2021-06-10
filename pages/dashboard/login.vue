@@ -22,9 +22,14 @@
               </v-col>
             </v-row>
             <v-row>
-              <v-col cols="2">
-                <v-btn class="login-btn" dark>
-                  Connexion
+              <v-col cols="auto">
+                <v-btn to="/dashboard/administrator" class="login-btn" dark>
+                  Connexion Administrateur
+                </v-btn>
+              </v-col>
+              <v-col cols="auto">
+                <v-btn to="/dashboard/student" class="login-btn-student" dark>
+                  Connexion Etudiant
                 </v-btn>
               </v-col>
             </v-row>
@@ -50,6 +55,11 @@ export default{
 <style lang="scss">
 .login-btn {
   background: $main-gradient !important;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15) !important;
+  border-radius: 10px !important;
+}
+.login-btn-student {
+  background: linear-gradient(90deg, #8743FF 0%, #4136F1 100%) !important;
   box-shadow: 0 15px 35px rgba(0,0,0,0.15) !important;
   border-radius: 10px !important;
 }

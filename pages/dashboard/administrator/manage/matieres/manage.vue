@@ -5,7 +5,7 @@
     </v-col>
     <v-spacer></v-spacer>
     <v-col cols="12">
-      <h2 class="my-4"><v-icon color="black">mdi-home</v-icon> <v-icon color="black">mdi-chevron-right</v-icon> Gestion des formations (Diplomes) de votre établissement</h2>
+      <h2 class="my-4"><v-icon color="black">mdi-home</v-icon> <v-icon color="black">mdi-chevron-right</v-icon> Gestion les matières</h2>
     </v-col>
     <v-col cols="8">
       <v-data-table></v-data-table>

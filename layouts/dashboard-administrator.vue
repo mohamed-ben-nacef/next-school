@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app class="dashboard-admin-layout">
     <v-container fluid>
     <v-app-bar :prominent="$vuetify.breakpoint.lgAndDown" absolute app class="ma-2 my-4" color="transparent" flat>
       <v-toolbar-title style="font-weight: 600;">Espace Administrateur</v-toolbar-title>
@@ -129,49 +129,95 @@ export default {
         }
       ]
     }
+  },
+  mounted() {
+    this.$vuetify.theme.themes.light.primary = '#F7B500'/* = {
+      secondary: '#FA6400',
+      
+      accent: '#8c9eff',
+      error: '#b71c1c',
+    }*/
   }
 }
 </script>
-<style lang="scss">
-.v-toolbar__extension {
-  height: auto !important;
-}
-.v-toolbar__content > *{
-  align-self: center !important;
-}
-.main-menu{
-  background: white;
-  font-weight: 600;
-  font-size: 14px;
-  border-radius: 15px;
-  box-shadow: 0 15px 25px rgba(0,0,0,0.1);
-  .v-btn__content{
-    text-transform: capitalize !important;
-    letter-spacing: 0 !important;
-  }
-}
-.menu-btn{
-  background: $main-gradient;
-  border-radius: 15px !important;
-  box-shadow: 0 25px 25px rgb(0 0 0 / 10%);
-  margin: 0 15px;
-  color: white !important;
-}
-.main-submenu{
-  box-shadow: 0 25px 25px rgb(0 0 0 / 10%) !important;
-  border-radius: 15px !important;
-  min-width: 250px !important;
-  .v-list-item{
-    transition: all .4s ease-in-out;
-    &:hover{
-      cursor: pointer;
-      background: $main-gradient !important;
-      * {
-        color: white !important;
-      }
+<style lang="scss" scoped>
+
+.dashboard-admin-layout::v-deep {
+
+  background-color: #FFF5EA !important;
+
+  .dashboard-card{
+    background: white !important;
+    box-shadow: 0 15px 25px rgba(0,0,0,0.04) !important;
+    border-radius: 15px !important;
+    overflow: hidden;
+    transition: all 0.4s ease !important;
+    > div {
+      padding: 25px !important;
+      position: relative;
+      z-index: 1;
     }
-    margin: 5px 10px;
-    border-radius: 10px;
+    //padding: 25px !important;
+    /*
+    &:before{
+      content:"";
+      position: absolute;
+      opacity: 0;
+      background: $main-gradient !important;
+      transition: all 0.4s ease !important;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+    &:not(.transparent):hover::before{
+      opacity: 1;
+    }*/
+    &:hover {
+      background: transparent !important;
+      transform: scale(1.05);
+    }
+  }
+
+  .v-toolbar__extension {
+    height: auto !important;
+  }
+  .v-toolbar__content > *{
+    align-self: center !important;
+  }
+  .main-menu{
+    background: white;
+    font-weight: 600;
+    font-size: 14px;
+    border-radius: 15px;
+    box-shadow: 0 15px 25px rgba(0,0,0,0.1);
+    .v-btn__content{
+      text-transform: capitalize !important;
+      letter-spacing: 0 !important;
+    }
+  }
+  .menu-btn{
+    background: $main-gradient;
+    border-radius: 15px !important;
+    box-shadow: 0 25px 25px rgb(0 0 0 / 10%);
+    margin: 0 15px;
+    color: white !important;
+  }
+  .main-submenu{
+    box-shadow: 0 25px 25px rgb(0 0 0 / 10%) !important;
+    border-radius: 15px !important;
+    min-width: 250px !important;
+    .v-list-item{
+      transition: all .4s ease-in-out;
+      &:hover{
+        cursor: pointer;
+        background: $main-gradient !important;
+        * {
+          color: white !important;
+        }
+      }
+      margin: 5px 10px;
+      border-radius: 10px;
+    }
   }
 }
 </style>

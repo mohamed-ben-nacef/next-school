@@ -17,6 +17,7 @@
     "apexcharts": "^3.26.3",
     "core-js": "^3.9.1",
     "express": "^4.17.1",
+    "mongoose": "^5.12.13",
     "nuxt": "^2.15.3",
     "vue-apexcharts": "^1.6.1"
   },

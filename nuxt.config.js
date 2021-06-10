@@ -1,7 +1,7 @@
 export default {
   head: {
-    titleTemplate: '%s - nuxt-school',
-    title: 'nuxt-school',
+    titleTemplate: '%s - Mini Projet TI106 2k21',
+    title: 'NextSchool',
     htmlAttrs: {
       lang: 'en',
     },
@@ -38,17 +38,7 @@ export default {
 
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
-    treeShake: true,
-    theme: {
-      themes: {
-        light: {
-          secondary: '#FA6400',
-          primary: '#F7B500',
-          accent: '#8c9eff',
-          error: '#b71c1c',
-        },
-      },
-    }
+    treeShake: true
   },
 
   build: {},
